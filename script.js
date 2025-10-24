@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let player1 = "";
   let player2 = "";
   let currentPlayer = "";
-  let currentSymbol = "X";
+  let currentSymbol = "x";
   let gameOver = false;
 
   submitBtn.addEventListener("click", () => {
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".player-inputs").style.display = "none";
     boardDiv.style.display = "grid";
     currentPlayer = player1;
-    currentSymbol = "X";
+    currentSymbol = "x";
     gameOver = false;
     messageDiv.textContent = `${currentPlayer}, you're up`;
     startGame();
@@ -53,10 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
   function switchPlayer() {
     if (currentPlayer === player1) {
       currentPlayer = player2;
-      currentSymbol = "O";
+      currentSymbol = "o";
     } else {
       currentPlayer = player1;
-      currentSymbol = "X";
+      currentSymbol = "x";
     }
     messageDiv.textContent = `${currentPlayer}, you're up`;
   }
